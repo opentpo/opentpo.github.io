@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en_us">
+<head>
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <script src="jquery-1.9.1.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <!--nav-->
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+	<a class="brand" href="index.html">openTPO</a>
+	<ul class="nav">
+	  <li class="active"><a href="index.html">Home</a></li>
+	  <li class="divider-vertical"></li>
+	  <li><a href="download.html">Download</a></li>
+	  <li class="divider-vertical"></li>
+	  <li><a href="news.html">News</a></li>
+	  <li class="divider-vertical"></li>	
+	  <li><a href="features.html">Features</a></li>
+	  <li class="divider-vertical"></li>
+	  <li><a href="contribute.html">Contribute</a></li>
+	  <li class="divider-vertical"></li>
+	  <li><a href="contributors.html">Contributors</a></li>
+	</ul>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="max-width: 1024px; margin: 0 auto;">
+    <!--hero unit-->
+    <div id="myCarousel" class="carousel slide">
+      <ol class="carousel-indicators">
+	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	<li data-target="#myCarousel" data-slide-to="1"></li>
+	<li data-target="#myCarousel" data-slide-to="2"></li>
+	<li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>
+      <!-- Carousel items -->
+      <div class="carousel-inner">
+	<div class="active item">
+	  <img src="images/lighten.jpg" alt="">
+          <div class="carousel-caption">
+            <h4>Lighten up your English study</h4>
+            <p></p>
+          </div>
+	</div>
+	<div class="item">
+	  <img src="images/pace.jpg" alt="">
+          <div class="carousel-caption">
+            <h4>Pace yourself better</h4>
+            <p></p>
+          </div>
+	</div>
+	<div class="item">
+	  <img src="images/strategy.jpg" alt="">
+          <div class="carousel-caption">
+            <h4>Discover your own strategy</h4>
+            <p></p>
+          </div>
+	</div>
+	<div class="item">
+	  <img src="images/performance.jpg" alt="">
+          <div class="carousel-caption">
+            <h4>Improve performance on actual test</h4>
+            <p></p>
+          </div>
+	</div>
+      </div>
+      <!-- Carousel nav -->
+      <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>
+    <!--Main article-->
+    <div class="container-fluid">
+      <div class="row-fluid">
+	<div class="span3">
+	  <!--Sidebar content-->
+          <ul class="nav nav-list" id="left-side-nav" data-spy="affix" data-offset-top="510">
+            <li><a href="#whatisit"><i class="icon-hand-right"></i> What is it?</a></li>
+            <li><a href="#advantages"><i class="icon-hand-right"></i> Advantages</a></li>
+          </ul>
+	</div>
+	<div class="span9 offset3">
+	  <!--Body content-->
+	  <section>
+	    <h2 id="whatisit">What is it?</h2>
+	    <p>openTPO is a simulator for test of Engligh for foreign languages, a useful tool for test-takers to prepare for the test.</p>
+	    <p>Test-takers can become more familiar with the test procedure and the fashion of questions. Contents of openTPO come from TPO which is from the actual tests. By practising with openTPO, you can find your own pace of test, and try different strategy to solve the questions and have a better performance in the actual test.</p>
+	  </section>
+	  <section>
+	    <h2 id="advantages">Advantages:</h2>
+	    <ul>
+	      <li>
+		<h3>Free of charge</h3>
+		<p>Built on a webpage, openTPO is completely open-source and thus definitely free. (Now that you have the source code written by us developers, how could we charge you?) You do NOT have to pay some money to buy a similar TPO simulator on Taobao. You do NOT need any "crackers" anymore.</p>
+	      </li>
+	      <li>
+		<h3>Light-weighted</h3>
+		<p>As long as your computer has the latest browser (e.g. IE10, Chrome, Firefox, etc.), openTPO can run with full functionality, needless to install a huge Java runtime library which would slow down your computer.</p>
+	      </li>
+	      <li>
+		<h3>Keeping bug-free</h3>
+		<p>If you find error in contents or bugs of openTPO itself, report to us! We will soon solve the problem and add your name to the contributor list. If you are aware of how webpage works, forking openTPO repository on github.com and pulling requests or just submitting issues are both much acknowledged! How do you report a problem if using a "cracked" software?</p>
+	      </li>
+	    </ul>
+	  </section>
+	  <section>
+	    <p>
+	      <button class="btn btn-large btn-primary" type="button" id="downloadnow">Try it online!</button>
+	      <button class="btn btn-large" type="button" id="downloadnow">Download now</button>
+	    </p>
+	  </section>
+	</div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div id="container">
+      <p>Powered by Bootstrap</p>
+    </div>
+  </footer>
+</body>
+</html>

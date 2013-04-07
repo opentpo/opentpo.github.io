@@ -1,0 +1,37 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+}
+body{
+    padding-top: 65px;
+}
+section{
+    margin-bottom: 3em;
+}
+section h2{
+    margin-top: -40px;
+    padding-top: 40px;
+}
+section li > h3{
+    margin-top: 1em;
+}
+footer{
+    border-top: 1px solid #ccc;
+    background: #f5f5f5;
+    text-align: center;
+    margin: 2em 0;
+}
+footer #container{
+    text-align: center;
+    margin: 2em 0;
+}
+.carousel-inner{
+    margin-bottom: 3em;
+}
+.span3{
+    height: 1px;
+}
+#left-side-nav.affix {
+    top: 65px;
+}​
