@@ -14,13 +14,19 @@ body{
     #sidebar{
 	display: none;
     }
+    .hero-unit{
+	padding: 1em;
+    }
     .hero-unit h1{
-	font-size: 250%;
+	font-size: 225%;
     }
 }
 @media(max-width: 400px){
     #sidebar{
 	display: none;
+    }
+    .hero-unit{
+	padding: 1em;
     }
     .hero-unit h1{
 	font-size: 200%;
