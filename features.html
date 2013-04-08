@@ -2,8 +2,8 @@
 <html lang="en_us">
 <head>
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
   <link href="style.css" rel="stylesheet" />
   <script src="jquery-1.9.1.min.js"></script>
   <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -14,20 +14,23 @@
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
+	<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	</a>
 	<a class="brand" href="index.html">openTPO</a>
+	<div class="nav-collapse collapse">
 	<ul class="nav">
 	  <li><a href="index.html">Home</a></li>
-	  <li class="divider-vertical"></li>
+	  <li><a href="tryit.html">Try it online!</a></li>
 	  <li><a href="download.html">Download</a></li>
-	  <li class="divider-vertical"></li>
 	  <li><a href="news.html">News</a></li>
-	  <li class="divider-vertical"></li>	
 	  <li class="active"><a href="features.html">Features</a></li>
-	  <li class="divider-vertical"></li>
 	  <li><a href="contribute.html">Contribute</a></li>
-	  <li class="divider-vertical"></li>
 	  <li><a href="contributors.html">Contributors</a></li>
 	</ul>
+	</div>
       </div>
     </div>
   </div>
@@ -38,7 +41,7 @@
     <!--Main article-->
     <div class="container-fluid">
       <div class="row-fluid">
-	<div class="span3">
+	<div class="span3" id="sidebar">
 	  <!--Sidebar content-->
           <ul class="nav nav-list" id="left-side-nav" data-spy="affix" data-offset-top="210">
             <li><a href="#modes"><i class="icon-hand-right"></i> Modes</a></li>
@@ -77,18 +80,18 @@
 	  </section>
 	  <section>
 	    <p>
-	      <button class="btn btn-large btn-primary" type="button" id="downloadnow">Try it online!</button>
-	      <button class="btn btn-large" type="button" id="downloadnow">Download now</button>
+	      <a href="tryit.html"><button class="btn btn-large btn-primary" type="button">Try it now!</button></a>
 	    </p>
 	  </section>
 	</div>
       </div>
     </div>
   </div>
-  <footer>
+  <div id="footer">
     <div id="container">
       <p>Powered by Bootstrap</p>
+      <p>Contact: <a href="mailto: opentpo@outlook.com">opentpo@outlook.com</a></p>
     </div>
-  </footer>
+  </div>
 </body>
 </html>

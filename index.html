@@ -3,10 +3,9 @@
 <head>
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
-  <link href="style.css" rel="stylesheet" />
+  <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
   <script src="jquery-1.9.1.min.js"></script>
-  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
@@ -14,24 +13,27 @@
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
+	<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	</a>
 	<a class="brand" href="index.html">openTPO</a>
-	<ul class="nav">
-	  <li class="active"><a href="index.html">Home</a></li>
-	  <li class="divider-vertical"></li>
-	  <li><a href="download.html">Download</a></li>
-	  <li class="divider-vertical"></li>
-	  <li><a href="news.html">News</a></li>
-	  <li class="divider-vertical"></li>	
-	  <li><a href="features.html">Features</a></li>
-	  <li class="divider-vertical"></li>
-	  <li><a href="contribute.html">Contribute</a></li>
-	  <li class="divider-vertical"></li>
-	  <li><a href="contributors.html">Contributors</a></li>
-	</ul>
+	<div class="nav-collapse collapse">
+	  <ul class="nav">
+	    <li class="active"><a href="index.html">Home</a></li>
+	    <li><a href="tryit.html" class="tryit">Try it online!</a></li>
+	    <li><a href="download.html">Download</a></li>
+	    <li><a href="news.html">News</a></li>
+	    <li><a href="features.html">Features</a></li>
+	    <li><a href="contribute.html">Contribute</a></li>
+	    <li><a href="contributors.html">Contributors</a></li>
+	  </ul>
+	</div>
       </div>
     </div>
   </div>
-  <div class="container" style="max-width: 1024px; margin: 0 auto;">
+  <div class="container">
     <!--hero unit-->
     <div id="myCarousel" class="carousel slide">
       <ol class="carousel-indicators">
@@ -45,29 +47,29 @@
 	<div class="active item">
 	  <img src="images/lighten.jpg" alt="">
           <div class="carousel-caption">
-            <h4>Lighten up your English study</h4>
-            <p></p>
+            <h4>Lighten the path of English study</h4>
+            <p>Reading, listening, speaking, and writing. openTPO is your best assistant helping with these skills.</p>
           </div>
 	</div>
 	<div class="item">
 	  <img src="images/pace.jpg" alt="">
           <div class="carousel-caption">
             <h4>Pace yourself better</h4>
-            <p></p>
+            <p>Practice makes perfect. Only feeling easy to the bomb-like countdown in practice sets could you be the winner of the actual test.</p>
           </div>
 	</div>
 	<div class="item">
 	  <img src="images/strategy.jpg" alt="">
           <div class="carousel-caption">
             <h4>Discover your own strategy</h4>
-            <p></p>
+            <p>Everyone is unique. There does not exist a universal strategy to the questions: find it out in practice by yourself. </p>
           </div>
 	</div>
 	<div class="item">
 	  <img src="images/performance.jpg" alt="">
           <div class="carousel-caption">
             <h4>Improve performance on actual test</h4>
-            <p></p>
+            <p>Be aware of where you fall. Review answers every time you finish a practice. Avoid err in the same place.</p>
           </div>
 	</div>
       </div>
@@ -78,7 +80,7 @@
     <!--Main article-->
     <div class="container-fluid">
       <div class="row-fluid">
-	<div class="span3">
+	<div class="span3" id="sidebar">
 	  <!--Sidebar content-->
           <ul class="nav nav-list" id="left-side-nav" data-spy="affix" data-offset-top="510">
             <li><a href="#whatisit"><i class="icon-hand-right"></i> What is it?</a></li>
@@ -111,18 +113,21 @@
 	  </section>
 	  <section>
 	    <p>
-	      <button class="btn btn-large btn-primary" type="button" id="downloadnow">Try it online!</button>
-	      <button class="btn btn-large" type="button" id="downloadnow">Download now</button>
+	      <a href="tryit.html"><button class="btn btn-large btn-primary" type="button">Try it online!</button></a>
+	      <a href="download.html"><button class="btn btn-large" type="button" id="downloadnow">Download now</button></a>
 	    </p>
 	  </section>
 	</div>
       </div>
     </div>
   </div>
-  <footer>
+  <div id="footer">
     <div id="container">
       <p>Powered by Bootstrap</p>
+      <p>Contact: <a href="mailto: opentpo@outlook.com">opentpo@outlook.com</a></p>
     </div>
-  </footer>
+  </div>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
