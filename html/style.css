@@ -6,10 +6,9 @@ All lefts reserved.
 /*************************
 Set page width and height.
 **************************/
-*:not(button) {
+* {
     margin: 0;
     padding: 0;
-    border: 0;
 }
 html, body{
     width: 979px;
@@ -331,7 +330,7 @@ The following are settings of buttons.
 **************************************/
 /*Round buttons at the right side. Size: 59*39 */
 .circleButtonsRight, .circleButtonsRightGrey{
-    display: block;
+    display: none;
     float: right;
     width: 59px;
     height: 39px;
@@ -342,7 +341,7 @@ The following are settings of buttons.
 }
 /*Square buttons at the right side. Size: 74*34. Let's set the height the same as round buttons, simply for convenience. */
 .squareButtonsRight, .specialSquareButtonsRight{
-    display: block;
+    display: none;
     float: right;
     width: 74px;
     height: 34px;
@@ -358,7 +357,7 @@ The following are settings of buttons.
 
 /*Only square buttons at the left side. Size: 84*34 */
 .buttonsLeft{
-    display: block;
+    display: none;
     float: left;
     width: 84px;
     height: 34px;
@@ -499,7 +498,7 @@ The following are settings of buttons.
     background: url("images/meta.png") no-repeat -924px -32px;
 }
 #showTimeButton, #hideTimeButton{
-    display: block;
+    display: none;
     float: right;
     position: absolute;
     width: 84px;
@@ -797,9 +796,6 @@ Init code
     display:none;
     padding: 20px 30px;
 }
-#header > a{
-    display:none;
-}
 #reviewChart{
     position: absolute;
     overflow: hidden;
@@ -855,7 +851,7 @@ a.rIns0, a.rIns1, a.rIns2, a.rIns3{
     top: 0.05em;
     margin: 0 0.12em;
     height: 0.85em;
-    width: 0.78em;
+    width: 0.9em;
     background: black;
 }
 #readingQ .rMark{
