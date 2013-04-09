@@ -512,12 +512,13 @@ __id('hideTimeButton').onclick = function(){
 };
 window.onload = function(){
     resetSystem();
+    if (storage.load('init') === '0'){
+	notify.show('green', 'First start', '<p>Welcome to openTPO online preview. Please feel free to experience its features!</p><p>It would be helpful to know more about openTPO project by clicking on other parts of the navigation bar.</p>', [['OK', 'storage.reset();']], false);
+}
 }
 
 //first-start instructions & clean storage
-if (storage.load('init') === '0'){
-    notify.show('green', 'First start', '<p>Welcome to openTPO online preview. Please feel free to experience its features!</p><p>It would be helpful to know more about openTPO project by clicking on other parts of the navigation bar.</p>', [['OK', 'storage.reset();']], false);
-}
+
 
 function clearThisSection(){
     switch(nowSection){
