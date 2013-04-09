@@ -975,7 +975,7 @@ h1 h2 on welcome page
 /**************
 fix unintentionally set by bootstrap
 ***************/
-#readingQ a:visited, #readingQ a:focus, #readingQ a:hover, #readingQ a:active{
+#readingQ a:visited, #readingQ a:focus, #readingQ a:hover, #readingQ a:active, #readingQSumSix a:visited, #readingQSumSix a:focus, #readingQSumSix a:hover, #readingQSumSix a:active{
     text-decoration: none !important;
     color: #000 !important;
 }
