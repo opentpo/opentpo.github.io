@@ -287,16 +287,16 @@ var storage = function(){
     return {
 	reset : function(){
 	    var i, j, temp, tempj;
-	    this.save('init', 1);
+	    this.save('preinit', 1);
 	    for (i = 1; i <= allSets; i++){
 		temp = i.toString();
 		for (j = 0; j <= 50; j++){
 		    var tempj = j.toString();
-		    this.save(temp + 'rq' + tempj, 0);
-		    this.save(temp + 'lq' + tempj, 0);
+		    this.save(temp + 'prerq' + tempj, 0);
+		    this.save(temp + 'prelq' + tempj, 0);
 		}
-		this.save(temp + 'w1', '');
-		this.save(temp + 'w2', '');
+		this.save(temp + 'prew1', '');
+		this.save(temp + 'prew2', '');
 	    }
 	},
 	load : function(str){
@@ -316,13 +316,13 @@ var storage = function(){
 	clearReading : function(set){
 	    for (j = 0; j <= 50; j++){
 		var tempj = j.toString();
-		this.save(set.toString() + 'rq' + tempj, 0);
+		this.save(set.toString() + 'prerq' + tempj, 0);
 	    }
 	},
 	clearListening : function(set){
 	    for (j = 0; j <= 50; j++){
 		var tempj = j.toString();
-		this.save(set.toString() + 'lq' + tempj, 0);
+		this.save(set.toString() + 'prelq' + tempj, 0);
 	    }
 	},
 	clearWriting : function(set){
@@ -330,10 +330,10 @@ var storage = function(){
 	    this.clearWriting2();
 	},
 	clearWriting1 : function(set){
-	    this.save(set.toString() + 'w1', '');
+	    this.save(set.toString() + 'prew1', '');
 	},
 	clearWriting2 : function(set){
-	    this.save(set.toString() + 'w2', '');
+	    this.save(set.toString() + 'prew2', '');
 	},
 	exportToContainer : function(con){
 	    __deleteAllChild(con);
@@ -342,19 +342,19 @@ var storage = function(){
 	    var tmpvalue;
 	    str += allSets.toString();
 	    str += savVer;//save version
-	    str += this.load('init');
+	    str += this.load('preinit');
 	    for (i = 1; i <= allSets; i++){
 		temp = i.toString();
 		for (j = 0; j <= 50; j++){
 		    var tempj = j.toString();
-		    tmpvalue = this.load(temp + 'rq' + tempj);
+		    tmpvalue = this.load(temp + 'prerq' + tempj);
 		    //str += '_';
 		    str += tmpvalue;
-		    tmpvalue = this.load(temp + 'lq' + tempj);
+		    tmpvalue = this.load(temp + 'prelq' + tempj);
 		    //str += '_';
 		    str += tmpvalue;
 		}
-		tmpvalue = this.load(temp + 'w1');
+		tmpvalue = this.load(temp + 'prew1');
 		//str += '|_|';
 		str += tmpvalue;
 		//str += '|_|';
@@ -512,7 +512,7 @@ __id('hideTimeButton').onclick = function(){
 };
 window.onload = function(){
     resetSystem();
-    if (storage.load('init') === '0'){
+    if (storage.load('preinit') === '0'){
 	notify.show('green', 'First start', '<p>Welcome to openTPO online preview. Please feel free to experience its features!</p><p>It would be helpful to know more about openTPO project by clicking on other parts of the navigation bar.</p>', [['OK', 'storage.reset();']], false);
 }
 }
@@ -714,7 +714,7 @@ function readingHub(status){
     }
     function updateQuestion(qnum){
 	var i;
-	var origans = parseInt(storage.load(testSet.toString() + 'rq' + qnum), 10);
+	var origans = parseInt(storage.load(testSet.toString() + 'prerq' + qnum), 10);
 	__deleteId('insStyle'); //delete the tracks of InsertQuestion
 	//and generate and show question number in the header
 	__deleteAllChild(__id('questionNumber'));
@@ -998,25 +998,25 @@ function ovalClickR(index, qnum){
 	    __id('choice' + i.toString()).className = 'ovalNotSelected';
 	}
 	__id('choice' + index.toString()).className = 'ovalSelected';
-	storage.save(testSet.toString() + 'rq' + qnum, 1 << index);
+	storage.save(testSet.toString() + 'prerq' + qnum, 1 << index);
     }
     else{//cancel it
 	__id('choice' + index.toString()).className = 'ovalNotSelected';
-	storage.save(testSet.toString() + 'rq' + qnum, 0);
+	storage.save(testSet.toString() + 'prerq' + qnum, 0);
     }
 }
 function squareClickR(index, qnum){
     if (tpoMode === 2) return;
-    var qstr = testSet.toString() + 'rq' + qnum;
+    var qstr = testSet.toString() + 'prerq' + qnum;
     var origans = parseInt(storage.load(qstr), 10);
     if (__id('choice' + index.toString()).className === 'squareNotSelected'){ //choose it
 	__id('choice' + index.toString()).className = 'squareSelected';
-	storage.save(testSet.toString() + 'rq' + qnum, origans + (1 << index));
+	storage.save(testSet.toString() + 'prerq' + qnum, origans + (1 << index));
     }
     else{//cancel it
 	__id('choice' + index.toString()).className = 'squareNotSelected';
 	readingUpdateAnswer(questionNow, index, 'cancel');
-	storage.save(testSet.toString() + 'rq' + qnum, origans - (1 << index));
+	storage.save(testSet.toString() + 'prerq' + qnum, origans - (1 << index));
     }
 }
 function insUpdate(index, qnum){
@@ -1034,14 +1034,14 @@ function insUpdate(index, qnum){
 }
 function insClick(index, qnum){//0~~3 // only reading
     if (tpoMode === 2) return;
-    var qstr = testSet.toString() + 'rq' + qnum;
+    var qstr = testSet.toString() + 'prerq' + qnum;
     insUpdate(index, qnum);
     storage.save(qstr, 1 << index);
 }
 var sumSix = function(){
     //answer of sumSix is like '425', which indicates the choice that three answer frames are filled in
     var getOrigAns = function(qnum){
-	var qstr = testSet.toString() + 'rq' + qnum;
+	var qstr = testSet.toString() + 'prerq' + qnum;
 	var origans = storage.load(qstr);
 	while (origans.length < 3){
 	    origans = '0' + origans;
@@ -1049,7 +1049,7 @@ var sumSix = function(){
 	return origans;
     }
     var saveOrigAns = function(qnum, ans){
-	var qstr = testSet.toString() + 'rq' + qnum;
+	var qstr = testSet.toString() + 'prerq' + qnum;
 	storage.save(qstr, ans);
     }
     return {
@@ -1190,7 +1190,7 @@ function generateReviewReadingChart(rArg){
 	case 2:
 	case 4:
 	    myans = '';
-	    temp = storage.load(testSet.toString() + 'rq' + i);
+	    temp = storage.load(testSet.toString() + 'prerq' + i);
 	    for (j = 0; j < 4; j++){
 		if ((temp & (1 << j)) !== 0){
 		    myans += (j + 1).toString();
