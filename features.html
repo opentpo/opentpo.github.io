@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en_us">
 <head>
+  <title>Features - openTPO</title>
   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
   <link href="style.css" rel="stylesheet" />
-  <script src="jquery-1.9.1.min.js"></script>
-  <script src="bootstrap/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -28,6 +27,7 @@
 	  <li><a href="news.html">News</a></li>
 	  <li class="active"><a href="features.html">Features</a></li>
 	  <li><a href="contribute.html">Contribute</a></li>
+	  <li><a href="userguide.html">User Guide</a></li>
 	  <li><a href="contributors.html">Contributors</a></li>
 	</ul>
 	</div>
@@ -55,12 +55,18 @@
 	    <ul>
 	      <li>
 		<h3>Test Mode</h3>
+		<p>Test mode would simulate the actual process of the test, including all four parts in order: reading section, listening section, speaking section, and writing section. There would be a compulsory ten-minute break after listening section, like the actual test. Answers and responses will be saved automatically. Certainly, the bomb-like timer is unstoppable.</p>
+		<img class="img-polaroid" src="images/timerShow.jpg" title="The bomb-like timer" />
 	      </li>
 	      <li>
 		<h3>Practice Mode</h3>
+		<p>Practice mode splits an entire set of test into several parts. Apart from four sections mentioned above in the test mode, an individual task of speaking or writing could be selected as well. Answers of the selected part will be saved. In this mode, you could stop the timer.</p>
+		<img class="img-polaroid" src="images/pauseShow.jpg" title="Your ally against the bomb" />
 	      </li>
 	      <li>
 		<h3>Review Mode</h3>
+		<p>Review mode compares your answer and correct answer of reading section and listening section in a chart, from which you can reach every question and see solutions. For the speaking and writing section, since there are no correct answer, the chart show your own responses.</p>
+		<img class="img-polaroid" src="images/reviewShow.jpg" title="Review and improve" />
 	      </li>
 	    </ul>
 	  </section>
@@ -69,12 +75,14 @@
 	    <ul>
 	      <li>
 		<h3>Auto-save</h3>
+		<p>openTPO takes advantage of HTML5 traits: local storage. Needless to operate with files on your hard disk, openTPO save your answers immediately after you make a choice in the browser storage pool.</p>
+		<p>According to documentation on the trait of local storage, your answers will retain after you close the browser and even restart your computer, like what cookies do, which keep you logged in on a certain webpage such as Google. This trait is supported by all modern browsers and platforms.</p>
 	      </li>
 	      <li>
-		<h3>Export</h3>
-	      </li>
-	      <li>
-		<h3>Import</h3>
+		<h3>Export & Import (still under testing)</h3>
+		<p>Although a webpage has no permission to view or modify local files (otherwise surfing on the Internet would be extremely thrilling), openTPO is designed to allow you exporting and importing your answers, in case of accidently clearing browser history or changing a browser.</p>
+		<img class="img-polaroid" src="images/exportPrototypeShow.jpg" title="Ensure safety of your answers" />
+		<p>This feature is still under testing and unstable, but the online preview edition (clicking the button below labeled <strong>Try it now!</strong>) provides its prototype. Welcome to experience!</p>
 	      </li>
 	    </ul>
 	  </section>
@@ -93,5 +101,8 @@
       <p>Contact: <a href="mailto: opentpo@outlook.com">opentpo@outlook.com</a></p>
     </div>
   </div>
+
+  <script src="jquery-1.9.1.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,1018 @@
+/************************************
+This is stylesheet for openTPO_0.2.1.preview.
+All lefts reserved.
+*************************************/
+
+/*************************
+Set page width and height.
+**************************/
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    width: 1024px;
+    /*width: 100%;*/
+    margin: 0 auto;
+    padding: 0;
+    background: #f1e7ca !important;
+}
+
+#pagewrapper{ /*disable selection*/
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+#pagewrapper{
+    position: absolute;
+    top: 20px;
+    bottom: 0;
+    width: 1024px;
+    margin: 0 auto;
+}
+
+#header{
+    width: 1024px;
+    background: #365884; /* for non-css3 browsers */
+    background: -webkit-gradient(linear, left top, right top, from(#365884), to(#7e3139));
+    background: -moz-linear-gradient(left, #365884, #7e3139);
+    background: -ms-linear-gradient(left, #365884, #7e3139);
+    background: -o-linear-gradient(left, #365884, #7e3139);
+    background: linear-gradient(to right, #365884, #7e3139);
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    height: 107px;
+}
+
+.wrapper{
+    position: absolute;
+    overflow: hidden;
+    top: 107px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/*The text in the top-left corner.*/
+#pageTag{
+    position: absolute;
+    top: 25px;
+    left: 5px;
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: bold;
+    color: #fff;
+
+}
+
+/**********************
+Notification Popup
+***********************/
+#notifySystem{
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#dimmer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.3;
+    background: #c0c0c0;
+}
+#notifyWrapper{
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    bottom: 0;
+}
+#notification{
+    position: relative;
+    left: -50%;
+    -moz-box-shadow: 0 0 20px #333333;
+    -webkit-box-shadow: 0 0 20px #333333;
+    box-shadow: 0 0 20px #333333;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    padding-bottom: 0.6em;
+}
+
+#notificationHeader{
+    left: 0;
+    right: 0;
+    height: 20px;
+    padding: 0.11em 1em;
+    margin: 0;
+    -moz-border-radius: 2px 2px 0 0;
+    -webkit-border-radius: 2px 2px 0 0;
+    border-radius: 2px 2px 0 0;
+}
+#notificationHeader p{
+    margin: 0;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+#notificationContent{
+    margin: 0;
+    padding: 1.5em 2em;
+    font-family: Arial, sans-serif;
+}
+#notifyButtonsWrapper{
+    margin: 0 1.25em;
+    text-align: center;
+}
+.notifyButtons{
+    position: relative;
+    width: 4em;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    color: #000;
+    text-decoration: none;
+    background: #e9e9e9;
+    padding: 0.2em 0.6em;
+    margin: 0.25em 1em;
+    outline: none;
+}
+#notifyClose{
+    display: block;
+    float: right;
+    width: 16px;
+    height: 16px;
+    background: url("images/meta.png") no-repeat -885px 0;
+    position: absolute;
+    right: 4px;
+    top: 3px;
+}
+#notifyClose:active{
+    background: url("images/meta.png") no-repeat -901px 0;
+}
+.notifyButtons:hover{
+    background: #fff;
+}
+.notifyButtons:active{
+    top: 2px;
+    right: 2px;
+}
+/*********************** 
+Font settings
+************************/
+p, li{
+    font-family: Tahoma, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: #000;
+    line-height: 1.12em;
+}
+li{
+    list-style-type:none;
+}
+
+#readingPassage p{
+    text-indent: 2em;
+    margin: 0;
+}
+.glossaryUnderlined{
+    text-decoration: underline;
+    color: #00008b;
+}
+#markedIndicator{
+    background: #c0c0c0;
+    width: 85%;
+    margin: 2em auto;
+    padding: 0 1em;
+}
+#markedIndicator p{
+    text-align: center;
+}
+#summaryIndicator{
+    background: #c0c0c0;
+    width: 86%;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+#summaryIndicator div{
+    margin: 0.25em auto;
+}
+
+#toBeInserted{
+    margin-left: 3em;
+    font-weight: bold;
+}
+strong {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+h2{
+    text-align: left;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+.ovalSelected span{
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 22px;
+    height: 15px;
+    background: url("images/meta.png") no-repeat -1008px -13px;
+}
+.ovalNotSelected span{
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 22px;
+    height: 15px;
+    background: url("images/meta.png") no-repeat -1008px -28px;
+}
+.ovalSelected, .ovalNotSelected{
+    padding: 0 0 10px 32px;
+    position: relative;
+}
+.squareSelected span{
+    position: absolute;
+    left: 2px;
+    top: 1px;
+    width: 15px;
+    height: 15px;
+    background: url("images/meta.png") no-repeat -900px -16px;
+}
+.squareNotSelected span{
+    position: absolute;
+    left: 2px;
+    top: 1px;
+    width: 15px;
+    height: 15px;
+    background: url("images/meta.png") no-repeat -885px -16px;
+}
+.squareSelected, .squareNotSelected{
+    padding: 0 0 10px 32px;
+    position: relative;
+}
+.arrowIndicator{
+    margin-top: 2em;
+}
+#questionNumber{
+    position: absolute;
+    height: 1em;
+    bottom: -6px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+    font-family: Verdana, sans-serif;
+}
+#timer{
+    position: absolute;
+    height: 1em;
+    bottom: -6px;
+    width: 100%;
+    right: 0;
+    color: #fff;
+    text-align: right;
+    font-weight: normal;
+    display: none;
+    font-family: Verdana, sans-serif;
+}
+#hours, #minutes, #seconds{
+    display: inline-block;
+    text-align: center;
+    width: 1.5em;
+}
+em{
+    font-style: italic;
+}
+.rInsQ{
+    display: inline-block;
+    position: relative;
+    top: 0.2em;
+    margin: 0 0.12em;
+    height: 1em;
+    width: 1em;
+    background: black;
+}
+li a{
+    color: #000;
+    text-decoration: none;
+}
+li a:link, li a:visited, li a:focus, li a:hover, li a:active{
+    outline: none;
+}
+.directions{
+    font-size: 24px;
+    margin-bottom: 1.5em;
+}
+.directions ~ p, #readingHaveTime p{
+    margin: 1em 0;
+}
+
+/*************************************
+The following are settings of buttons.
+**************************************/
+/*Round buttons at the right side. Size: 59*39 */
+.circleButtonsRight, .circleButtonsRightGrey{
+    display: block;
+    float: right;
+    width: 59px;
+    height: 39px;
+    margin-right: 8px;
+    position: relative;
+    right: 0px;
+    top: 26px;
+}
+/*Square buttons at the right side. Size: 74*34. Let's set the height the same as round buttons, simply for convenience. */
+.squareButtonsRight, .specialSquareButtonsRight{
+    display: block;
+    float: right;
+    width: 74px;
+    height: 34px;
+    margin-right: 8px;
+    position: relative;
+    right: 0px;
+    top: 28.5px;
+}
+/*and there are still a couple of buttons at the size 84*34. Take them into consideration. */
+.specialSquareButtonsRight{
+    width: 84px;
+}
+
+/*Only square buttons at the left side. Size: 84*34 */
+.buttonsLeft{
+    display: block;
+    float: left;
+    width: 84px;
+    height: 34px;
+    margin-left: 8px;
+    position: relative;
+    left: 0px;
+    top: 67px;
+
+}
+/*Images of all buttons*/
+#backButton{
+    background: url("images/meta.png") no-repeat -826px 0;
+}
+#backButton:hover{
+    background: url("images/meta.png") no-repeat -708px 0;
+}
+#helpButton{
+    background: url("images/meta.png") no-repeat -531px 0;
+}
+#helpButton:hover{
+    background: url("images/meta.png") no-repeat -472px 0;
+}
+#reviewButton{
+    background: url("images/meta.png") no-repeat -236px 0;
+}
+#reviewButton:hover{
+    background: url("images/meta.png") no-repeat -118px 0;
+}
+#continueCircleButton{
+    background: url("images/meta.png") no-repeat -649px 0;
+}
+#continueCircleButton:hover{
+    background: url("images/meta.png") no-repeat -590px 0;
+}
+#continueButton{
+    background: url("images/meta.png") no-repeat -938px -73px;
+}
+#continueButton:hover{
+    background: url("images/meta.png") no-repeat -864px -73px;
+}
+#reviewSquareButton{
+    background: url("images/meta.png") no-repeat -494px -73px;
+}
+#reviewSquareButton:hover{
+    background: url("images/meta.png") no-repeat -420px -73px;
+}
+#returnButton{
+    background: url("images/meta.png") no-repeat -642px -73px;
+}
+#returnButton:hover{
+    background: url("images/meta.png") no-repeat -568px -73px;
+}
+#gotoQuestionButton{
+    background: url("images/meta.png") no-repeat -790px -73px;
+}
+#gotoQuestionButton:hover{
+    background: url("images/meta.png") no-repeat -716px -73px;
+}
+#viewTextButton{
+    background: url("images/meta.png") no-repeat -84px -39px;
+}
+#viewTextButton:hover{
+    background: url("images/meta.png") no-repeat 0 -39px;
+}
+#viewQuestionButton{
+    background: url("images/meta.png") no-repeat -252px -39px;
+}
+#viewQuestionButton:hover{
+    background: url("images/meta.png") no-repeat -168px -39px;
+}
+#nextButton{
+    background: url("images/meta.png") no-repeat -413px 0;
+}
+#nextButton:hover{
+    background: url("images/meta.png") no-repeat -295px 0;
+}
+#volumeButton{
+    background: url("images/meta.png") no-repeat -59px 0;
+}
+#volumeButton:hover{
+    background: url("images/meta.png") no-repeat 0 0;
+}
+#sectionExitButton{
+    background: url("images/meta.png") no-repeat -756px -39px;
+}
+#sectionExitButton:hover{
+    background: url("images/meta.png") no-repeat -672px -39px;
+}
+#pauseTestButton{
+    background: url("images/meta.png") no-repeat -168px -73px;
+}
+#pauseTestButton:hover{
+    background: url("images/meta.png") no-repeat -84px -73px;
+}
+#resumeTestButton{
+    background: url("images/meta.png") no-repeat 0 -73px;
+}
+#resumeTestButton:hover{
+    background: url("images/meta.png") no-repeat -840px -39px;
+}
+#showSolutionButton{
+    background: url("images/meta.png") no-repeat -588px -39px;
+}
+#showSolutionButton:hover{
+    background: url("images/meta.png") no-repeat -504px -39px;
+}
+#hideSolutionButton{
+    background: url("images/meta.png") no-repeat -336px -73px;
+}
+#hideSolutionButton:hover{
+    background: url("images/meta.png") no-repeat -252px -73px;
+}
+#nextButtonGrey{
+    background: url("images/meta.png") no-repeat -354px 0;
+}
+#backButtonGrey{
+    background: url("images/meta.png") no-repeat -767px 0;
+}
+#reviewButtonGrey{
+    background: url("images/meta.png") no-repeat -177px 0;
+}
+#testExitButton{
+    background: url("images/meta.png") no-repeat -420px -39px;
+}
+#testExitButton:hover{
+    background: url("images/meta.png") no-repeat -336px -39px;
+}
+#showTimeButton{
+    background: url("images/meta.png") no-repeat -924px -16px;
+}
+#showTimeButton:hover{
+    background: url("images/meta.png") no-repeat -924px 0;
+}
+#hideTimeButton{
+    background: url("images/meta.png") no-repeat -924px -48px;
+}
+#hideTimeButton:hover{
+    background: url("images/meta.png") no-repeat -924px -32px;
+}
+#showTimeButton, #hideTimeButton{
+    display: block;
+    float: right;
+    position: absolute;
+    width: 84px;
+    height: 16px;
+    right: 120px;
+    bottom: 3px;
+}
+#showTimeButton:active, #hideTimeButton:active{
+    right: 122px;
+    bottom: 1px;
+}
+
+/*When buttons are pressed down, let's shift them a bit.*/
+.circleButtonsRight:active{
+    right: 2px;
+    top: 28px;
+}
+.squareButtonsRight:active, .specialSquareButtonsRight:active{
+     right: 2px;
+     top: 30.5px;
+}
+.buttonsLeft:active{
+    left: -2px;
+    top: 69px;
+}
+
+
+
+
+
+/*********************
+Reading
+**********************/
+#readingSplitWindow{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+/*Reading passage occupies the right side.*/
+#readingContent{
+    width: 50%;
+    overflow: hidden;
+    background: #fff;
+    border-left: 2px solid black;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+#readingPassage{
+    padding: 1em 1.2em 1em 1.5em;
+    overflow: auto;
+    position: absolute;
+    top: 20px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+/*Normal questions occupies the left side.*/
+#readingQFrame{
+    width: 50%;
+    height: 100%;
+    /*float: left;*/
+    background: #fff;
+    padding: 0 0 0 1.5em;
+    margin: 0;
+}
+#readingQ, #readingQIns{
+    margin-right: 2.5em;
+}
+#readingQ p, #readingQIns p{
+    margin-top: 1.2em;
+}
+#readingQ ul{
+    position: relative;
+    margin-top: 1em;
+}
+/*Beginning, More, or End*/
+#readingStatusBar{
+    height: 20px;
+    width: 100%;
+    background: #000080;
+}
+#readingStatusBar p{
+    margin: 0 auto;
+    text-align: right;
+    color: #fff;
+    line-height: 20px;
+    font-size: 16px;
+}
+#readingPassage h1{
+    margin: 1em auto 1.2em auto;
+}
+#readingPassage p{
+    position: relative;
+}
+#readingQSumSix{
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1em 4em;
+    overflow: auto;
+}
+.rArrow{
+    display: inline-block;
+    width: 19px;
+    height: 13px;
+    background: url("images/meta.png") no-repeat -1008px 0;
+    position: absolute;
+    top: 3px;
+    left: 1px;
+}
+.rArrowQ{
+    display: inline-block;
+    width: 19px;
+    height: 13px;
+    background: url("images/meta.png") no-repeat -1008px 0;
+    position: relative;
+    left: 1px;
+    top: 1px;
+}
+#readingEnd{
+    display: block;
+    height: 90%;
+}
+#readingQSumSixHead{
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+}
+#readingQSumSix h1{
+    margin: 0.5em auto;
+}
+#readingQSumSixAns{
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 1em;
+    padding: 1em 2em;
+    outline: 1px solid black;
+}
+#readingQSumSixAns li{
+    display: block;
+    list-style-type: disc;
+    height: 3.5em;
+}
+#readingQSumSixChoices{
+    width: 100%;
+    height: 13em;
+    margin: 0 auto;
+    margin-top: 1em;
+}
+#readingQSumSixChoices li{
+    display: block;
+    height: 4em;
+    overflow: hidden;
+}
+#readingQSumSixChoices > ul{
+    width: 45%;
+    margin: 0 0 0 4%;
+    list-style-type: none;
+}
+#readingQSumSixChoices > ul:first-of-type{
+    float: left;
+}
+#readingQSumSixChoices > ul:nth-of-type(2){
+    float: right;
+}
+/*
+#readingQSumSixChoices > li:nth-of-type(1), #readingQSumSixChoices > li:nth-of-type(2), #readingQSumSixChoices > li:nth-of-type(3){
+    width: 45%;
+}
+#readingQSumSixChoices > li:nth-of-type(4), #readingQSumSixChoices > li:nth-of-type(5), #readingQSumSixChoices > li:nth-of-type(6){
+    width: 45%;
+}*/
+/********************
+Reading Glossary
+*********************/
+#readingGlossary{
+    width: 40%;
+    height: auto;
+    position: absolute;
+    left: 5%;
+    bottom: 30px;
+    border: 1px solid black;
+    padding: 0;
+}
+#readingGlossaryTitle{
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 18px;
+    line-height: 18px;
+    background: #808080;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+#readingGlossaryContents{
+    margin: 10px 12px;
+}
+#glossaryClose{
+    display: block;
+    float: right;
+    width: 16px;
+    height: 16px;
+    background: url("images/meta.png") no-repeat -885px 0;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+}
+#glossaryClose:active{
+    background: url("images/meta.png") no-repeat -901px 0;
+}
+
+/***************
+White Buttons
+****************/
+#setSelectPage{
+    overflow: auto;
+}
+#setSelectButtons{
+    float:left;
+    margin: 0 auto;
+}
+.whiteButtons, .whiteButtonsSetSelect{
+    width: 7em;
+    text-align: center;
+    float: left;
+    border: 1px solid black;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #000;
+    text-decoration: none;
+    background: #e9e9e9;
+    padding: 1em;
+    margin-right: 4em;
+    position: relative;
+    outline: none;
+}
+.whiteButtonsSetSelect{
+    width: 15.1%;
+}
+.whiteButtonsSetSelect{
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+    margin-bottom: 0.2em;
+}
+.whiteButtons:hover, .whiteButtonsSetSelect:hover{
+    background: #fff;
+}
+.whiteButtons:active, .whiteButtonsSetSelect:active{
+    left: -2px;
+    top: 2px;
+}
+.whiteButtons:link, .whiteButtonsSetSelect:link, .whiteButtons:visited, .whiteButtonsSetSelect:visited, .whiteButtons:focus, .whiteButtonsSetSelect:focus, .whiteButtons:hover, .whiteButtonsSetSelect:hover, .whiteButtons:active, .whiteButtonsSetSelect:active{
+    outline: none;
+}
+
+/************
+welcome page
+*************/
+/*#welcomePage{
+    padding: 80px 100px;
+}*/	
+#welcomePage > div{
+    height: 100px;
+}
+#welcomePage > p{
+    line-height: 2em;
+}
+
+
+/*********************
+Init code
+**********************/
+.wrapper > div{
+    display:none;
+    padding: 80px 100px;
+    position: absolute:
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#readingQFrame > div{
+    display:none;
+    padding: 20px 30px;
+}
+#header > a{
+    display:none;
+}
+#reviewChart{
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#reviewChart h1{
+    font-size: 16px;
+    margin: 0.5em;
+}
+#reviewReading{
+    position: absolute;
+    top: 2em;
+    bottom: 2em;
+    left: 2em;
+    width: 40%;
+}
+#reviewChartReading{
+    position: absolute;
+    top: 3em;
+    bottom: 2em;
+    width: 100%;
+    overflow: auto;
+}
+#reviewChartReading table{
+    width: 100%;
+}
+#reviewChartReading th:first-of-type, reviewChartReading th:nth-of-type(3n + 1){
+    width: 10%;
+}
+#reviewChartReading th:nth-of-type(2), reviewChartReading th:nth-of-type(3n + 2){
+    width: 40%;
+}
+#reviewChartReading th:nth-of-type(3), reviewChartReading th:nth-of-type(3n){
+    width: 50%;
+}
+
+/************
+about reading passage control
+*************/
+span > .rArrow{
+    display: none;
+}
+.rIns0, .rIns1, .rIns2, .rIns3, .rIns0 + strong, .rIns1 + strong, .rIns2 + strong, .rIns3 + strong{
+    display: none;
+}
+a.rIns0, a.rIns1, a.rIns2, a.rIns3{
+    /*display: inline-block;*/
+/*set in js*/ 
+    position: relative;
+    top: 0.05em;
+    margin: 0 0.12em;
+    height: 0.85em;
+    width: 0.78em;
+    background: black;
+}
+#readingQ .rMark{
+    background: #c0c0c0 !important;
+}
+
+#helpPage, #aboutPage, #contributePage, #acknowledgePage{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+}
+
+#readingSectionDirections{
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+
+/***********
+review chart
+************/
+#reviewChart table{
+    font-family: Verdana, Arial, sans-serif;
+    border-collapse: collapse;
+}
+#reviewChart th{
+    background: #ccc;
+    text-align: right;
+}
+#reviewChart td{
+    text-align: right;
+}
+.reviewTableCorrect{
+    background: #9f9;
+}
+.reviewTableIncorrect{
+    background: #f99;
+}
+#reviewTableSelected{
+    background: #99f;
+}
+.correctChoice{
+    background: #9f9;
+}
+
+
+/**********
+settings page
+***********/
+#welcomePage button{
+    font-size: 100%;
+    margin-right: 2em;
+    margin-bottom: 2em;
+}
+button{
+    padding: 0.8em !important;
+}
+input{
+    padding: 0.2em;
+    font-size: 150%;
+}
+#settingsPage p{
+    margin-bottom: 1em;
+}
+#importContent, #exportContent{
+    overflow: auto;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 20em;
+    max-height: 20em;
+    -moz-user-select: auto;
+    -webkit-user-select: auto;
+    -ms-user-select: auto;
+    -khtml-user-select: auto;
+    user-select: auto;
+}
+/****************
+h1 h2 on welcome page
+*****************/
+.contentPage{
+    padding: 0 4em !important;
+}
+.contentPage h1{
+    font-size: 175%;
+    margin: 1em auto;
+}
+.contentPage h2{
+    font-size: 125%;
+    margin: 1em auto;
+}
+.contentPage h3{
+    font-size: 110%;
+    margin: 0.4em auto;
+    font-weight: normal;
+}
+.contentPage li{
+    margin-bottom: 1em;
+}
+.contentPage p{
+    padding-left: 2em;
+    line-height: 120%;
+    margin-bottom: 1em;
+}
+.contentPage section{
+    margin-bottom: 3em;
+}
+
+/**************
+fix unintentionally set by bootstrap
+***************/
+#readingQ a:visited, #readingQ a:focus, #readingQ a:hover, #readingQ a:active{
+    text-decoration: none !important;
+    color: #000 !important;
+}
+#readingPassage h1{
+    font-size: 16px;
+}
+#readingQSumSix h1{
+    font-size: 16px;
+}
+h1{
+    color: #000 !important;
+}
+li{
+    line-height: 110% !important;
+}
+h2{
+    color: #000 !important;
+}
+#resetInput{
+    width: 80px;
+    height: 40px;
+    font-size: 24px;
+    color: #000;
+}
+ul.nav li{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+    padding-top: 3px;
+}
+.whiteButtonsSetSelect{
+    width: 7em;
+}
+#notificationContent{
+    font-size: 16px;
+}
+#readingQ li{
+    margin-left: -24px;
+}

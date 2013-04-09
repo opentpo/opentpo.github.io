@@ -5,6 +5,9 @@ html, body{
 body{
     padding-top: 65px;
 }
+.container{
+    max-width: 1024px;
+}
 @media(max-width: 979px){
     body{
 	padding-top: 0;
@@ -53,6 +56,7 @@ section li > h3{
     text-align: center;
     margin: 2em 0;
 }
+
 .carousel-inner{
     margin-bottom: 3em;
 }
@@ -62,6 +66,10 @@ section li > h3{
 #left-side-nav.affix {
     top: 65px;
 }​
+
+#myCarousel{
+    max-width: 1024px;
+}
 /*
 .tryit{
     outline: 2px solid red;
