@@ -23,6 +23,9 @@ body{
     .hero-unit h1{
 	font-size: 225%;
     }
+    #indexHero h2{
+	font-size: 135%;
+    }
 }
 @media(max-width: 400px){
     #sidebar{
@@ -33,6 +36,9 @@ body{
     }
     .hero-unit h1{
 	font-size: 200%;
+    }
+    #indexHero h2{
+	font-size: 115%;
     }
 }
 section{
@@ -70,8 +76,23 @@ section li > h3{
 #myCarousel{
     max-width: 1024px;
 }
-/*
-.tryit{
-    outline: 2px solid red;
-    color: #ffffff;text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);background-color: #006dcc;background-image: -moz-linear-gradient(top, #00aacc, #0066cc);background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#00aacc), to(#0066cc));background-image: -webkit-linear-gradient(top, #00aacc, #0066cc);background-image: -o-linear-gradient(top, #00aacc, #0066cc);background-image: linear-gradient(to bottom, #00aacc, #0066cc);background-repeat: repeat-x;border-color: #0066cc #0066cc #002a80;border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff00aacc', endColorstr='#ff0066cc', GradientType=0);filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-}*/
+#indexHero{
+    text-align: center;
+}
+#indexHero button{
+    margin: 1em auto;
+}
+#index-meta ul{
+    list-style-type: none;
+    position: relative;
+    left: -50%;
+}
+#index-meta li{
+    font-size: 80%;
+    display: inline-block;
+    margin: 0 1.5em;
+}
+#index-meta{
+    position: relative;
+    left: 50%;
+}
